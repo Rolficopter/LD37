@@ -45,8 +45,8 @@ public class RoomLevelManager : MonoBehaviour
 				
 		var objectsToRemove = GameObject.FindGameObjectsWithTag ("RemoveFor_Level" + (nextLevel + 1));
 		foreach (var obj in objectsToRemove) {
-			// TODO: animate here
-			DestroyObject (obj);
+            obj.SendMessage("RemoveWall");
+			DestroyObject (obj,10f);
 		}
 		Debug.LogFormat ("Removed {0} object(s).", objectsToRemove.Length);
 

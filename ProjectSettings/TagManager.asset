@@ -10,6 +10,7 @@ TagManager:
   - RemoveFor_Level4
   - GameManager
   - Lever
+  - Enemy
   layers:
   - Default
   - TransparentFX
