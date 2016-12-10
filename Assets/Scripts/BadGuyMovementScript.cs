@@ -14,6 +14,7 @@ public class BadGuyMovementScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position = Vector3.Slerp (transform.position, target.position, Time.deltaTime * speed);
+		Vector3 newPosition = Vector3.Slerp (transform.position, target.position, Time.deltaTime * speed);
+		transform.position = new Vector3(newPosition.x, transform.position.y, newPosition.z);
 	}
 }
