@@ -5,7 +5,7 @@ using UnityEngine;
 public class BadGuyMovementScript : MonoBehaviour {
 
 	public Transform target;
-	public float speed = 1;
+	public float speed = 0.003f;
 
 	// Use this for initialization
 	void Start () {
@@ -14,7 +14,8 @@ public class BadGuyMovementScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Vector3 newPosition = Vector3.Slerp (transform.position, target.position, Time.deltaTime * speed);
+		Vector3 peda = target.position - transform.position;
+		Vector3 newPosition = transform.position + speed * (Vector3.Normalize(peda));
 		transform.position = new Vector3(newPosition.x, transform.position.y, newPosition.z);
 	}
 }
