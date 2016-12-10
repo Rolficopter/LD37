@@ -224,6 +224,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114876874069057636, guid: 600d9f4bd5d9a334dab7e8328d8e088b,
+        type: 2}
+      propertyPath: softness
+      value: 0.547
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600d9f4bd5d9a334dab7e8328d8e088b, type: 2}
   m_IsPrefabParent: 0
@@ -439,37 +444,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4397249208981902, guid: a909ccc451f124487868862969b75462,
     type: 2}
   m_PrefabInternal: {fileID: 1815378677}
---- !u!1 &1145478971 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1447646038903998, guid: 600d9f4bd5d9a334dab7e8328d8e088b,
-    type: 2}
-  m_PrefabInternal: {fileID: 449637960}
---- !u!114 &1145478978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1145478971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9191284b058eef549b7108b5f04e1117, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  intensityMultiplier: 0.73
-  generalIntensity: 0.221
-  blackIntensity: 1
-  whiteIntensity: 1
-  midGrey: 0.2
-  dx11Grain: 0
-  softness: 0
-  monochrome: 1
-  intensities: {x: 1, y: 1, z: 1}
-  tiling: {x: 64, y: 64, z: 64}
-  monochromeTiling: 64
-  filterMode: 1
-  noiseTexture: {fileID: 2800000, guid: 7a632f967e8ad42f5bd275898151ab6a, type: 3}
-  noiseShader: {fileID: 4800000, guid: b0249d8c935344451aa4de6db76f0688, type: 3}
-  dx11NoiseShader: {fileID: 4800000, guid: 8b30686bb4322ab42ad5eb50a0210b58, type: 3}
 --- !u!1001 &1154547165
 Prefab:
   m_ObjectHideFlags: 0

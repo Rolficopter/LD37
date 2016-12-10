@@ -60,6 +60,7 @@ GameObject:
   - component: {fileID: 114887026648493996}
   - component: {fileID: 114769345899443692}
   - component: {fileID: 114876874069057636}
+  - component: {fileID: 114986360035207096}
   m_Layer: 0
   m_Name: FirstPersonCharacter
   m_TagString: MainCamera
@@ -957,7 +958,7 @@ MonoBehaviour:
   shader: {fileID: 4800000, guid: 71babc9493fbfe34699f11d233ef98a0, type: 3}
   Distortion: 0.1
   InputGamma: 7.96
-  OutputGamma: 1.4
+  OutputGamma: 1.5
   TextureSize: 697.24
 --- !u!114 &114876874069057636
 MonoBehaviour:
@@ -976,7 +977,7 @@ MonoBehaviour:
   whiteIntensity: 1
   midGrey: 0.2
   dx11Grain: 0
-  softness: 0
+  softness: 0.547
   monochrome: 1
   intensities: {x: 1, y: 1, z: 1}
   tiling: {x: 64, y: 64, z: 64}
@@ -1103,6 +1104,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shakeStrength: 0.1
   shaking: 0
+--- !u!114 &114986360035207096
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1447646038903998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd6d4281e5d7cd44d8c6e38bc2c1b8d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mode: 0
+  intensity: 0.2
+  chromaticAberration: 0.2
+  axialAberration: 0.5
+  blur: 0.083
+  blurSpread: 0
+  luminanceDependency: 0.25
+  blurDistance: 2.5
+  vignetteShader: {fileID: 4800000, guid: 627943dc7a9a74286b70a4f694a0acd5, type: 3}
+  separableBlurShader: {fileID: 4800000, guid: e97c14fbb5ea04c3a902cc533d7fc5d1, type: 3}
+  chromAberrationShader: {fileID: 4800000, guid: 2b4f29398d9484ccfa9fd220449f5eee,
+    type: 3}
 --- !u!124 &124837137895510176
 Behaviour:
   m_ObjectHideFlags: 1
