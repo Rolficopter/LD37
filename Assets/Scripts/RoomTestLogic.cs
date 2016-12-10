@@ -9,6 +9,7 @@ public class RoomTestLogic : MonoBehaviour {
 		StartCoroutine(NextLevel("Level2", 3));
 		StartCoroutine(NextLevel("Level3", 6));
 		StartCoroutine(NextLevel("Level4", 9));
+		StartCoroutine (GameOver ());
 	}
 	
 	// Update is called once per frame
@@ -26,5 +27,10 @@ public class RoomTestLogic : MonoBehaviour {
 		}
 			
 		GameObject.Find ("LevelChangedSound").GetComponent<AudioSource> ().Play ();
+	}
+
+	IEnumerator GameOver() {
+		yield return new WaitForSeconds (13);
+		GameObject.Find ("GameOverSound").GetComponent<AudioSource> ().Play ();
 	}
 }
