@@ -954,6 +954,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114884672077016468, guid: 600d9f4bd5d9a334dab7e8328d8e088b,
+        type: 2}
+      propertyPath: m_FootstepSounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4949416242319338, guid: 600d9f4bd5d9a334dab7e8328d8e088b, type: 2}
       propertyPath: m_LocalPosition.x
       value: 7.8159666
@@ -991,6 +996,41 @@ Prefab:
       propertyPath: intensityMultiplier
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 114884672077016468, guid: 600d9f4bd5d9a334dab7e8328d8e088b,
+        type: 2}
+      propertyPath: m_FootstepSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 193a208268161b84195a6f967b47c642, type: 3}
+    - target: {fileID: 114884672077016468, guid: 600d9f4bd5d9a334dab7e8328d8e088b,
+        type: 2}
+      propertyPath: m_FootstepSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3de11e833e3d1e245a3344e29f187017, type: 3}
+    - target: {fileID: 114884672077016468, guid: 600d9f4bd5d9a334dab7e8328d8e088b,
+        type: 2}
+      propertyPath: m_FootstepSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: ce7307aba23e45c40808dfff015226fc, type: 3}
+    - target: {fileID: 114884672077016468, guid: 600d9f4bd5d9a334dab7e8328d8e088b,
+        type: 2}
+      propertyPath: m_FootstepSounds.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3e03d330f6adb974f9d25535e8b03a70, type: 3}
+    - target: {fileID: 114884672077016468, guid: 600d9f4bd5d9a334dab7e8328d8e088b,
+        type: 2}
+      propertyPath: m_FootstepSounds.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: e2257c9adfb167740a136427a6cf929a, type: 3}
+    - target: {fileID: 114884672077016468, guid: 600d9f4bd5d9a334dab7e8328d8e088b,
+        type: 2}
+      propertyPath: m_JumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a296291774489404f9dbf5a923255259, type: 3}
+    - target: {fileID: 114884672077016468, guid: 600d9f4bd5d9a334dab7e8328d8e088b,
+        type: 2}
+      propertyPath: m_LandSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 4ac15b34fc22bbf42a14e05842968b80, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600d9f4bd5d9a334dab7e8328d8e088b, type: 2}
   m_IsPrefabParent: 0
