@@ -18,6 +18,6 @@ public class BadGuyFloatEffectScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		transform.position += new Vector3(0, amplitude * randomValueB * Mathf.Sin (Time.time * frequency * randomValueB), 0);
+		transform.position += new Vector3(0, amplitude * randomValueA * Mathf.Sin (Time.time * frequency * randomValueB), 0);
 	}
 }
