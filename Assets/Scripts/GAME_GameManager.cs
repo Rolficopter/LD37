@@ -7,7 +7,8 @@ public class GAME_GameManager : MonoBehaviour {
     public static bool gameRunning;
     public static int currentLevel;
     public static int enemiesKilled;
-
+    public static int amountOfLevel;
+    
     public static GAME_UIHandler uiScript;
 
 	void Start () {
@@ -32,6 +33,31 @@ public class GAME_GameManager : MonoBehaviour {
         if (!gameRunning)
         {
             gameRunning = true;
+        }
+    }
+
+
+    //Go to Next Level
+    public static void nextLevel()
+    {
+        //Check if Last Level
+        if ((getCurrentLevel()) == amountOfLevel)
+        {
+            //Winning Screen
+            Debug.Log("You won!");
+
+        //Check if next Level is valid
+        }else if ((getCurrentLevel() + 1) > 0 && (getCurrentLevel() + 1) <= amountOfLevel)
+        {
+            //Set Current Level To Next Level
+            setCurrentLevel(getCurrentLevel() + 1);
+            //Destroy every GameObject with Tag ("Level+currentLevel")
+            string tag = "Level" + getCurrentLevel();
+            var objectsToDestroy = GameObject.FindGameObjectsWithTag(tag);
+            foreach(var obj in objectsToDestroy)
+            {
+                DestroyObject(obj);
+            }
         }
     }
 
