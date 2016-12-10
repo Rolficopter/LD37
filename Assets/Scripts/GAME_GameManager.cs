@@ -12,6 +12,7 @@ public class GAME_GameManager : MonoBehaviour {
     public static GAME_UIHandler uiScript;
 
 	void Start () {
+        amountOfLevel = 2;
         gameRunning = true;
         currentLevel = 1;
         uiScript = GetComponent<GAME_UIHandler>();
@@ -38,7 +39,7 @@ public class GAME_GameManager : MonoBehaviour {
 
 
     //Go to Next Level
-    public static void nextLevel()
+    public void nextLevel()
     {
         //Check if Last Level
         if ((getCurrentLevel()) == amountOfLevel)
