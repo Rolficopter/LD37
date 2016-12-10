@@ -8,6 +8,8 @@ TagManager:
   - RemoveFor_Level2
   - RemoveFor_Level3
   - RemoveFor_Level4
+  - GameManager
+  - Lever
   layers:
   - Default
   - TransparentFX
