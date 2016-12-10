@@ -7,8 +7,13 @@ public class BadGuyFloatEffectScript : MonoBehaviour {
 	public float amplitude = 0.0075f;
 	public float frequency = 4;
 
-	private float randomValueA = Random.value + 0.5f;
-	private float randomValueB = Random.value + 0.5f;
+	private float randomValueA;
+	private float randomValueB;
+
+	void Start() {
+		randomValueA = Random.value + 0.5f;
+		randomValueB = Random.value + 0.5f;
+	}
 
 
 	// Update is called once per frame
