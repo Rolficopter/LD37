@@ -7,31 +7,50 @@ public class DudeInteractionManager : MonoBehaviour {
 	[Range(0, 10)]
 	public float interactionDistance = 1.5f;
 
+	private bool canInteract;
+
 	// Use this for initialization
 	void Start () {
-		
+		this.canInteract = true;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (Input.GetKey(KeyCode.E) && this.canInteract) {
+			this.TryPullLever ();
+		}
 	}
 
-	void FixedUpdate() {
-		if (Input.GetKeyUp (KeyCode.E)) {
-			RaycastHit hit;
-			Vector3 forward = this.transform.TransformDirection (Vector3.forward);
-			if (Physics.Raycast (transform.position, forward, out hit, this.interactionDistance)) {
-				//Debug.LogFormat ("Hit {0} at distance {1}", hit.collider.gameObject, hit.distance);
+	private void TryPullLever() {
+		RaycastHit hit;
+		Vector3 forward = this.transform.TransformDirection (Vector3.forward);
 
-				GameObject lever = hit.collider.gameObject;
-				if (lever.tag == "Lever") {
-					var animator = lever.GetComponent<LeverAnimator> ();
-					if (animator != null) {
-						animator.RunPullAnimation ();
-					}
-				}
+		Debug.LogFormat ("Searching for levers at distance {0}", this.interactionDistance);
+		if (Physics.Raycast (transform.position, forward, out hit, this.interactionDistance)) {
+			// hit a collider at distance y
+
+			GameObject lever = hit.collider.gameObject;
+			Debug.Log (lever);
+			if (lever.tag == "Lever") {
+				StartCoroutine(this.PullLever (lever));
 			}
 		}
+	}
+
+	private IEnumerator PullLever(GameObject lever) {
+		this.canInteract = false;
+
+		var animator = lever.GetComponent<LeverInteractionManager> ();
+		yield return StartCoroutine (animator.RunPullAnimation ());
+		this.ActivateNextLevel ();
+
+		this.canInteract = true;
+	}
+
+	private void ActivateNextLevel() {
+		// Continue to next Level
+		GameObject gm = GameObject.FindGameObjectWithTag("GameManager");
+		RoomLevelManager roomMgr = gm.GetComponent<RoomLevelManager> ();
+		roomMgr.GoToNextLevel ();
 	}
 }

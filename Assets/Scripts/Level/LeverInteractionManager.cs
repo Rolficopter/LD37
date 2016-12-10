@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LeverAnimator : MonoBehaviour {
+public class LeverInteractionManager : MonoBehaviour {
 
 	public string pullLeverAnimationName = "Lever_pull";
 
@@ -16,12 +16,15 @@ public class LeverAnimator : MonoBehaviour {
 	/// <summary>
 	/// Runs the pull animation.
 	/// </summary>
-	public void RunPullAnimation() {
+	public IEnumerator RunPullAnimation() {
 		if (this.wasAnimated) {
-			return;
+			yield return null;
 		}
 		this.wasAnimated = true;
 
-		this.gameObject.GetComponent<Animation>().Play (this.pullLeverAnimationName);
+		Debug.LogFormat ("Starting {0}...", this.pullLeverAnimationName);
+		var anim = this.gameObject.GetComponent<Animation> ();
+		anim.Play (this.pullLeverAnimationName);
+		yield return anim.WhilePlaying ();
 	}
 }
