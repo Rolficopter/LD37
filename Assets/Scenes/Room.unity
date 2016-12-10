@@ -244,53 +244,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 4331627597206596, guid: 600d9f4bd5d9a334dab7e8328d8e088b, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4949416242319338, guid: 600d9f4bd5d9a334dab7e8328d8e088b, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 108078642748150576, guid: 600d9f4bd5d9a334dab7e8328d8e088b,
-        type: 2}
-      propertyPath: m_Type
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1622622960369040, guid: 600d9f4bd5d9a334dab7e8328d8e088b, type: 2}
-      propertyPath: m_Name
-      value: Light
-      objectReference: {fileID: 0}
-    - target: {fileID: 108078642748150576, guid: 600d9f4bd5d9a334dab7e8328d8e088b,
-        type: 2}
-      propertyPath: m_SpotAngle
-      value: 110
-      objectReference: {fileID: 0}
-    - target: {fileID: 108078642748150576, guid: 600d9f4bd5d9a334dab7e8328d8e088b,
-        type: 2}
-      propertyPath: m_Intensity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 108078642748150576, guid: 600d9f4bd5d9a334dab7e8328d8e088b,
-        type: 2}
-      propertyPath: m_BounceIntensity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 108078642748150576, guid: 600d9f4bd5d9a334dab7e8328d8e088b,
-        type: 2}
-      propertyPath: m_Shadows.m_Type
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 23650829109598664, guid: 600d9f4bd5d9a334dab7e8328d8e088b,
-        type: 2}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 108078642748150576, guid: 600d9f4bd5d9a334dab7e8328d8e088b,
-        type: 2}
-      propertyPath: m_Range
-      value: 90
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600d9f4bd5d9a334dab7e8328d8e088b, type: 2}
   m_IsPrefabParent: 0
