@@ -19,9 +19,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4064997948249536}
-  - component: {fileID: 114229051157477226}
   - component: {fileID: 114033840299610712}
-  - component: {fileID: 114361290218023904}
+  - component: {fileID: 114532621535139068}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -53,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4df7e37f566e294499fd2d0767d97162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114229051157477226
+--- !u!114 &114532621535139068
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -61,19 +60,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1203820033182130}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb5698afa00709e4e8feb07b73d36ef5, type: 3}
+  m_Script: {fileID: 11500000, guid: 784bfb6064b3b465d982abf00df1df30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114361290218023904
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1203820033182130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b63427f01b88df4b9675cf6b2888b4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentLevelTxt: {fileID: 0}
-  enemiesKilledTxt: {fileID: 0}
+  numberOfLevels: 0

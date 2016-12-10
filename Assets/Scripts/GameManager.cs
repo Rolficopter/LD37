@@ -1,88 +1,53 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
-
-    public static bool gameRunning;
-    public static int enemiesKilled;
-	public static int amountOfLevel;
-
-	private static int currentLevel;
-    
-    public static UIHandler uiScript;
+	private bool isGamePaused;
+	private int enemiesKilled;
 
 	void Start () {
-        amountOfLevel = 2;
-		currentLevel = 0;
-
-        gameRunning = true;
-        uiScript = GetComponent<UIHandler>();
-        uiScript.updateText();
+		isGamePaused = false;
 	}
 
-    //Pause the Game
-    public static void pauseGame()
-    {
-        if (gameRunning)
-        {
-            gameRunning = false;
-        }
+	#region Pausing the Game
+    /// <summary>
+    /// Pauses the game.
+    /// </summary>
+    public void PauseGame() {
+		this.isGamePaused = true;
     }
 
-    //Resume the Game
-    public static void resumeGame()
-    {
-        if (!gameRunning)
-        {
-            gameRunning = true;
-        }
+    /// <summary>
+    /// Resumes the game.
+    /// </summary>
+    public void ResumeGame() {
+		this.isGamePaused = false;
     }
 
+	/// <summary>
+	/// Determines whether this instance is game paused.
+	/// </summary>
+	/// <returns><c>true</c> if this instance is game paused; otherwise, <c>false</c>.</returns>
+	public bool IsGamePaused() {
+		return this.isGamePaused;
+	}
+	#endregion
 
-    //Go to Next Level
-    public void nextLevel()
-    {
-        //Check if Last Level
-		if ((getCurrentLevel ()) == amountOfLevel) {
-			//Winning Screen
-			Debug.Log ("You won!");
-		} else {
-            //Set Current Level To Next Level
-            setCurrentLevel(getCurrentLevel() + 1);
-            //Destroy every GameObject with Tag ("Level+currentLevel")
-			string tag = "RemoveFor_Level" + (getCurrentLevel() + 1);
-            var objectsToDestroy = GameObject.FindGameObjectsWithTag(tag);
-            foreach(var obj in objectsToDestroy)
-            {
-                DestroyObject(obj);
-            }
-        }
-    }
+	#region Kill Count
+	/// <summary>
+	/// Sets the enemies killed.
+	/// </summary>
+	/// <param name="v">V.</param>
+	public void setEnemiesKilled(int v) {
+		enemiesKilled = v;
+	}
 
-    //Change Current Level
-    public static void setCurrentLevel(int lvl) {
-		if (lvl > 0 || lvl < amountOfLevel) {
-			currentLevel = lvl;
-			uiScript.updateText ();
-		} else {
-			Debug.LogWarningFormat ("Invalid level index: {1}", lvl);
-		}
-    }
-    //Get the Current Level
-    public static int getCurrentLevel() { return currentLevel; }
-
-    //Change the Amount of Enemies Killed
-    public static void setEnemiesKilled(int v) {
-        enemiesKilled = v;
-        uiScript.updateText();
-    }
-    //Get the amount of Enemies Killed
-    public static int getEnemiesKilled() { return enemiesKilled; }
-
-    //Get wether the the game is running or paused
-    public static bool isRunning()
-    {
-        return gameRunning;
-    }
+	/// <summary>
+	/// Gets the enemies killed.
+	/// </summary>
+	/// <returns>The enemies killed.</returns>
+	public int getEnemiesKilled() { return enemiesKilled; }
+	#endregion
 }

@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class UI_MainMenu : MonoBehaviour {
+public class UIMainMenu : MonoBehaviour {
 
 	public void StartGame()
     {
-        SceneManager.LoadScene(1);
+		SceneManager.LoadSceneAsync ("Room", LoadSceneMode.Single);
     }
 
     public void QuitGame()
