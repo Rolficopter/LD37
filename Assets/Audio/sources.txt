@@ -1,2 +1,3 @@
 rpg_woosh.mp3: http://www.freesound.org/people/lalazzylee1/sounds/362241/
-368367__thezero__game-over-sound.wav: http://www.freesound.org/people/TheZero/sounds/368367/
+game_over.wav: http://www.freesound.org/people/TheZero/sounds/368367/
+game_music.mp3: http://www.freesound.org/people/Magntron/sounds/335571/
