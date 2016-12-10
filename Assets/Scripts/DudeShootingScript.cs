@@ -16,7 +16,7 @@ public class DudeShootingScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetButtonDown ("Fire1")) {
-			Transform bullet = Instantiate(projectile, projectileSpawn.position, projectileSpawn.rotation);
+			Transform bullet = Instantiate(projectile, projectileSpawn.position, Camera.main.transform.rotation);
 			bullet.GetComponent<Rigidbody>().AddForce (bullet.transform.forward * projectileSpeed);
 			Destroy (bullet.gameObject, 2);
 		}
