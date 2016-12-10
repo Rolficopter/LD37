@@ -224,11 +224,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114876874069057636, guid: 600d9f4bd5d9a334dab7e8328d8e088b,
-        type: 2}
-      propertyPath: softness
-      value: 0.547
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600d9f4bd5d9a334dab7e8328d8e088b, type: 2}
   m_IsPrefabParent: 0
