@@ -138,6 +138,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600d9f4bd5d9a334dab7e8328d8e088b, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &452821742 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4949416242319338, guid: 600d9f4bd5d9a334dab7e8328d8e088b,
+    type: 2}
+  m_PrefabInternal: {fileID: 403301221}
 --- !u!1001 &486023645
 Prefab:
   m_ObjectHideFlags: 0
@@ -181,6 +186,11 @@ Prefab:
       propertyPath: m_Name
       value: Bad Guy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114969865525397690, guid: 94f2065a7ac24ce499943a1c5443ef41,
+        type: 2}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 452821742}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94f2065a7ac24ce499943a1c5443ef41, type: 2}
   m_IsPrefabParent: 0
@@ -691,6 +701,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114969865525397690, guid: 94f2065a7ac24ce499943a1c5443ef41,
+        type: 2}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 452821742}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94f2065a7ac24ce499943a1c5443ef41, type: 2}
   m_IsPrefabParent: 0

@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 65309517951574022}
   - component: {fileID: 114672321877667144}
   - component: {fileID: 114617932418843990}
+  - component: {fileID: 114969865525397690}
   m_Layer: 0
   m_Name: Bad Guy
   m_TagString: Untagged
@@ -91,6 +92,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d211f3caafa3d94b95e9f828037afad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114969865525397690
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1387574402140824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb2712b6a551402498adfedb576d2281, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  speed: 0.75
 --- !u!212 &212048135127530188
 SpriteRenderer:
   m_ObjectHideFlags: 1
