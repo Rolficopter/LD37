@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GAME_GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour {
 
 
     public static bool gameRunning;
@@ -10,14 +10,14 @@ public class GAME_GameManager : MonoBehaviour {
 
 	private static int currentLevel;
     
-    public static GAME_UIHandler uiScript;
+    public static UIHandler uiScript;
 
 	void Start () {
         amountOfLevel = 2;
 		currentLevel = 0;
 
         gameRunning = true;
-        uiScript = GetComponent<GAME_UIHandler>();
+        uiScript = GetComponent<UIHandler>();
         uiScript.updateText();
 	}
 

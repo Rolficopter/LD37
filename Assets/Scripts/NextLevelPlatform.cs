@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GAME_NextLevelPlatform : MonoBehaviour {
+public class NextLevelPlatform : MonoBehaviour {
 
 
     private void OnTriggerEnter(Collider other)
@@ -13,7 +13,7 @@ public class GAME_NextLevelPlatform : MonoBehaviour {
         {
             //Continue to next Level
             GameObject gm = GameObject.FindGameObjectWithTag("GameManager");
-            GAME_GameManager gmScript = gm.GetComponent<GAME_GameManager>();
+            GameManager gmScript = gm.GetComponent<GameManager>();
             gmScript.nextLevel();
             Destroy(this.gameObject);
         }
