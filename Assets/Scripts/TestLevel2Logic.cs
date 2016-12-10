@@ -24,5 +24,7 @@ public class TestLevel2Logic : MonoBehaviour {
 		foreach (var obj in objectsToRemove) {
 			DestroyObject (obj);
 		}
+			
+		GameObject.Find ("LevelChangedSound").GetComponent<AudioSource> ().Play ();
 	}
 }
