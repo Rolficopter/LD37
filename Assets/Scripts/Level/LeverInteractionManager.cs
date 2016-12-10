@@ -22,7 +22,6 @@ public class LeverInteractionManager : MonoBehaviour {
 		}
 		this.wasAnimated = true;
 
-		Debug.LogFormat ("Starting {0}...", this.pullLeverAnimationName);
 		var anim = this.gameObject.GetComponent<Animation> ();
 		anim.Play (this.pullLeverAnimationName);
 		yield return anim.WhilePlaying ();

@@ -35,7 +35,7 @@ public class RoomLevelManager : MonoBehaviour
 		int nextLevel = this.GetCurrentLevel () + 1;
 
 		if (nextLevel >= this.numberOfLevels) {
-			Debug.Log ("You won!");
+			//Debug.Log ("You won!");
 			return;
 		} 
 			
@@ -59,9 +59,6 @@ public class RoomLevelManager : MonoBehaviour
 		}
 		CameraShake cs = FindObjectOfType<CameraShake> ();
 		cs.StartShake (longestWallRemovalTime);
-
-		Debug.LogFormat ("Removed {0} object(s).", objectsToRemove.Length);
-
 	}
 
 	/// <summary>
