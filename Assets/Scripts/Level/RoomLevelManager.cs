@@ -42,15 +42,23 @@ public class RoomLevelManager : MonoBehaviour
 		if (!this.SetCurrentLevel (this.currentLevel + 1)) {
 			return;
 		}
-				
+
+
 		var objectsToRemove = GameObject.FindGameObjectsWithTag ("RemoveFor_Level" + (nextLevel + 1));
+		float longestWallRemovalTime = 0.0f;
 		foreach (var obj in objectsToRemove) {
-            float duration = 3.0f; //time it should take to move the wall
-            obj.SendMessage("RemoveWall", duration);
-			DestroyObject (obj, duration);
+
+			var wall = obj.GetComponent<WallLogic> ();
+			if (wall != null) {
+				StartCoroutine(wall.RunDisappearInGroundAnimation ());
+
+				if (longestWallRemovalTime < wall.disappearInGroundAnimationDuration) {
+					longestWallRemovalTime = wall.disappearInGroundAnimationDuration;
+				}
+			}
 		}
 		CameraShake cs = FindObjectOfType<CameraShake> ();
-		cs.StartShake (10f); // TODO: Better: Stop after walls moved away.
+		cs.StartShake (longestWallRemovalTime);
 
 		Debug.LogFormat ("Removed {0} object(s).", objectsToRemove.Length);
 
