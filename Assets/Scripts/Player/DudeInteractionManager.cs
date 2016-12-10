@@ -39,6 +39,11 @@ public class DudeInteractionManager : MonoBehaviour {
 		this.canInteract = false;
 
 		var animator = lever.GetComponent<LeverInteractionManager> ();
+		if (animator.wasPulled) {
+			this.canInteract = true;
+			yield break;
+		}
+
 		yield return StartCoroutine (animator.RunPullAnimation ());
 		this.ActivateNextLevel ();
 

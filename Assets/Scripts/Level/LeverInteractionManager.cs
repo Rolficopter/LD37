@@ -6,21 +6,22 @@ public class LeverInteractionManager : MonoBehaviour {
 
 	public string pullLeverAnimationName = "Lever_pull";
 
-	private bool wasAnimated;
+	[HideInInspector()]
+	public bool wasPulled;
 
 	// Use this for initialization
 	void Start () {
-		wasAnimated = false;
+		wasPulled = false;
 	}
 
 	/// <summary>
 	/// Runs the pull animation.
 	/// </summary>
 	public IEnumerator RunPullAnimation() {
-		if (this.wasAnimated) {
-			yield return null;
+		if (this.wasPulled) {
+			yield break;
 		}
-		this.wasAnimated = true;
+		this.wasPulled = true;
 
 		var anim = this.gameObject.GetComponent<Animation> ();
 		anim.Play (this.pullLeverAnimationName);
