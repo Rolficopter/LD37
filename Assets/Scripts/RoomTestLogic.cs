@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestLevel2Logic : MonoBehaviour {
+public class RoomTestLogic : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
