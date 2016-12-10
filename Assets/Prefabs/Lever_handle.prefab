@@ -56,6 +56,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4980222895721528}
   - component: {fileID: 65716365234718866}
+  - component: {fileID: 111401975051633126}
+  - component: {fileID: 114847572596564774}
   m_Layer: 0
   m_Name: Lever_handle
   m_TagString: Lever
@@ -103,7 +105,7 @@ Transform:
   - {fileID: 4091781995727572}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 125.737595, y: 0, z: 0}
 --- !u!23 &23343179962633890
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -188,7 +190,7 @@ BoxCollider:
   m_GameObject: {fileID: 1517089632481066}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -204,6 +206,33 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!111 &111401975051633126
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1851694823507454}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: 5a2abb6cd4b9648f0b718291609a91b5, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!114 &114847572596564774
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1851694823507454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03fdb66578ceb4c01b383d1a7a61af39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pullLeverAnimationName: Lever_pull
 --- !u!135 &135017850763367808
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -212,7 +241,7 @@ SphereCollider:
   m_GameObject: {fileID: 1671893987984762}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
