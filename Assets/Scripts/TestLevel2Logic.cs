@@ -6,7 +6,8 @@ public class TestLevel2Logic : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		StartCoroutine (GoToLevel2 ());
+		StartCoroutine(NextLevel("Level2", 5));
+		StartCoroutine(NextLevel("Level3", 10));
 	}
 	
 	// Update is called once per frame
@@ -14,10 +15,11 @@ public class TestLevel2Logic : MonoBehaviour {
 		
 	}
 
-	IEnumerator GoToLevel2() {
-		yield return new WaitForSeconds (10);
 
-		var objectsToRemove = GameObject.FindGameObjectsWithTag ("RemoveFor_Level2");
+	IEnumerator NextLevel(string name, float delay) {
+		yield return new WaitForSeconds (delay);
+
+		var objectsToRemove = GameObject.FindGameObjectsWithTag ("RemoveFor_" + name);
 		foreach (var obj in objectsToRemove) {
 			DestroyObject (obj);
 		}
