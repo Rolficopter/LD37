@@ -25,12 +25,10 @@ public class DudeInteractionManager : MonoBehaviour {
 		RaycastHit hit;
 		Vector3 forward = this.transform.TransformDirection (Vector3.forward);
 
-		Debug.LogFormat ("Searching for levers at distance {0}", this.interactionDistance);
 		if (Physics.Raycast (transform.position, forward, out hit, this.interactionDistance)) {
 			// hit a collider at distance y
 
 			GameObject lever = hit.collider.gameObject;
-			Debug.Log (lever);
 			if (lever.tag == "Lever") {
 				StartCoroutine(this.PullLever (lever));
 			}
