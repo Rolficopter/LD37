@@ -235,7 +235,7 @@ Prefab:
     - target: {fileID: 108078642748150576, guid: 600d9f4bd5d9a334dab7e8328d8e088b,
         type: 2}
       propertyPath: m_Type
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1622622960369040, guid: 600d9f4bd5d9a334dab7e8328d8e088b, type: 2}
       propertyPath: m_Name
@@ -265,6 +265,11 @@ Prefab:
         type: 2}
       propertyPath: m_CastShadows
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108078642748150576, guid: 600d9f4bd5d9a334dab7e8328d8e088b,
+        type: 2}
+      propertyPath: m_Range
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600d9f4bd5d9a334dab7e8328d8e088b, type: 2}
