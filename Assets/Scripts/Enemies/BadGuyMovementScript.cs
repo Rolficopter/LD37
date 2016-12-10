@@ -18,16 +18,16 @@ public class BadGuyMovementScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		Vector3 peda = target.position - transform.position;
-		Vector3 newPosition;
+		Vector3 velocity;
 
 		if (Time.time - lastCollision > 0.5f || Time.time - lastCollision < 0) {
-			newPosition = transform.position + speed * (Vector3.Normalize (peda));
+			velocity = speed * (Vector3.Normalize (peda));
 		} else {
-			newPosition = transform.position - speed * 3 * (Vector3.Normalize (peda));
+			velocity = -speed * 3 * (Vector3.Normalize (peda));
 		}
 	
 		Rigidbody rigidbody = GetComponent<Rigidbody> ();
-		rigidbody.MovePosition (newPosition);
+		rigidbody.velocity = velocity;
 	}
 
 	void OnCollisionEnter(Collision collision) {
