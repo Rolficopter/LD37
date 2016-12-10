@@ -17,7 +17,8 @@ public class DieOnBulletCollisionScript : MonoBehaviour {
 	void OnTriggerEnter(Collider col) {
 		if (col.gameObject.CompareTag("Bullet")) {
 			Destroy (gameObject);
-			Debug.Log ("Bullet!");
+			Destroy (col.gameObject);
+			// Play sound.
 		}
 	}
 }
