@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4566225540456826}
   - component: {fileID: 33445568163442234}
-  - component: {fileID: 65120259593357026}
   - component: {fileID: 23343179962633890}
   m_Layer: 0
   m_Name: Cube
@@ -38,7 +37,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4091781995727572}
   - component: {fileID: 33105914726419032}
-  - component: {fileID: 135017850763367808}
   - component: {fileID: 23660109054809896}
   m_Layer: 0
   m_Name: Sphere
@@ -182,18 +180,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1517089632481066}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65120259593357026
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1517089632481066}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65716365234718866
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -233,15 +219,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pullLeverAnimationName: Lever_pull
---- !u!135 &135017850763367808
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1671893987984762}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
