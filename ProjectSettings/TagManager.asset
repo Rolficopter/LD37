@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bullet
+  - RemoveFor_Level2
+  - RemoveFor_Level3
+  - RemoveFor_Level4
   layers:
   - Default
   - TransparentFX

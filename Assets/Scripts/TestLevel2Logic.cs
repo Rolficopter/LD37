@@ -6,8 +6,9 @@ public class TestLevel2Logic : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		StartCoroutine(NextLevel("Level2", 5));
-		StartCoroutine(NextLevel("Level3", 10));
+		StartCoroutine(NextLevel("Level2", 3));
+		StartCoroutine(NextLevel("Level3", 6));
+		StartCoroutine(NextLevel("Level4", 9));
 	}
 	
 	// Update is called once per frame
