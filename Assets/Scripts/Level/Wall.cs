@@ -36,6 +36,6 @@ public class Wall : MonoBehaviour
     {
 
         this.disappear = true;
-
+		CameraShake cs = FindObjectOfType<CameraShake> ();
     }
 }

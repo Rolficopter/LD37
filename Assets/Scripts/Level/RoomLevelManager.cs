@@ -48,6 +48,9 @@ public class RoomLevelManager : MonoBehaviour
             obj.SendMessage("RemoveWall");
 			DestroyObject (obj,10f);
 		}
+		CameraShake cs = FindObjectOfType<CameraShake> ();
+		cs.StartShake (10f); // TODO: Better: Stop after walls moved away.
+
 		Debug.LogFormat ("Removed {0} object(s).", objectsToRemove.Length);
 
 	}
