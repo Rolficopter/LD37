@@ -349,12 +349,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 967792517}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &990993328 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114361290218023904, guid: ab0aae7ef8183d04aa45372bd9d1b880,
-    type: 2}
-  m_PrefabInternal: {fileID: 1061449890}
-  m_Script: {fileID: 11500000, guid: 6b63427f01b88df4b9675cf6b2888b4b, type: 3}
 --- !u!1 &1060236269
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,7 +625,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 990993328}
+      objectReference: {fileID: 0}
     - target: {fileID: 1400817694458744, guid: 81ae272deb8070b499eb36c448d95f31, type: 2}
       propertyPath: m_Name
       value: Canvas
@@ -807,6 +801,22 @@ Transform:
   m_Father: {fileID: 261060033}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1693106553 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1203820033182130, guid: ab0aae7ef8183d04aa45372bd9d1b880,
+    type: 2}
+  m_PrefabInternal: {fileID: 1061449890}
+--- !u!114 &1693106554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1693106553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f504693944e353f4aa23fe32f14d1a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1922378794 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114424884684787938, guid: 81ae272deb8070b499eb36c448d95f31,
