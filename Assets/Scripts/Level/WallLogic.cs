@@ -21,9 +21,12 @@ public class WallLogic : MonoBehaviour
     }
 
 	public IEnumerator RunDisappearInGroundAnimation() {
+		var audio = this.GetComponent<AudioSource> ();
+		audio.Play ();
 		var anim = this.GetComponent<Animation> ();
 		anim.Play (this.disappearInGroundAnimationName);
 		// TODO: set animation duration
+		// TODO: let audioclip finish playing
 		yield return anim.WhilePlaying ();
 		DestroyObject (this.gameObject);
 	}
