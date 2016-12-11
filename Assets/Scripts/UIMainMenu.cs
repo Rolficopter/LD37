@@ -14,6 +14,8 @@ public class UIMainMenu : MonoBehaviour {
 	public void StartGame()
     {
 		text.SetActive (true);
+		var textAnimation = text.GetComponent<Animation> ();
+		textAnimation.Play ("Text_fade");
 
 		SceneManager.LoadSceneAsync ("Room", LoadSceneMode.Single);
     }
