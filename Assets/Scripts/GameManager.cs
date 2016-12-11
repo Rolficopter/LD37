@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour {
 	private bool isGamePaused;
 	private int enemiesKilled;
 
+	private float oldTimeScale = 0.0f;
+
 	void Start () {
 		isGamePaused = false;
 	}
@@ -17,6 +19,9 @@ public class GameManager : MonoBehaviour {
     /// </summary>
     public void PauseGame() {
 		this.isGamePaused = true;
+
+		this.oldTimeScale = Time.timeScale;
+		Time.timeScale = 0.0f;
     }
 
     /// <summary>
@@ -24,6 +29,7 @@ public class GameManager : MonoBehaviour {
     /// </summary>
     public void ResumeGame() {
 		this.isGamePaused = false;
+		Time.timeScale = this.oldTimeScale;
     }
 
 	/// <summary>
