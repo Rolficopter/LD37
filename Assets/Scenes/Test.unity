@@ -181,15 +181,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1387574402140824, guid: 94f2065a7ac24ce499943a1c5443ef41, type: 2}
-      propertyPath: m_Name
-      value: Bad Guy (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 114969865525397690, guid: 94f2065a7ac24ce499943a1c5443ef41,
         type: 2}
       propertyPath: target
       value: 
       objectReference: {fileID: 452821742}
+    - target: {fileID: 1387574402140824, guid: 94f2065a7ac24ce499943a1c5443ef41, type: 2}
+      propertyPath: m_Name
+      value: Bad Guy (4)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94f2065a7ac24ce499943a1c5443ef41, type: 2}
   m_IsPrefabParent: 0
@@ -975,6 +975,18 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 452821742}
+    - target: {fileID: 4919222862399070, guid: 94f2065a7ac24ce499943a1c5443ef41, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919222862399070, guid: 94f2065a7ac24ce499943a1c5443ef41, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919222862399070, guid: 94f2065a7ac24ce499943a1c5443ef41, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94f2065a7ac24ce499943a1c5443ef41, type: 2}
   m_IsPrefabParent: 0
