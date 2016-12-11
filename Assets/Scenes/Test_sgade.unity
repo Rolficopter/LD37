@@ -247,16 +247,6 @@ Prefab:
       objectReference: {fileID: 557997857}
     - target: {fileID: 114338899562954858, guid: 9af66008a44d84e85bf93b3bef2d22d2,
         type: 2}
-      propertyPath: spawnInterval
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114338899562954858, guid: 9af66008a44d84e85bf93b3bef2d22d2,
-        type: 2}
-      propertyPath: numberOfBadGuys
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114338899562954858, guid: 9af66008a44d84e85bf93b3bef2d22d2,
-        type: 2}
       propertyPath: endless
       value: 1
       objectReference: {fileID: 0}

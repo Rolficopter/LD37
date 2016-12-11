@@ -5,7 +5,7 @@ using UnityEngine;
 public class BadGuySpawnerLogic : MonoBehaviour {
 
 	public bool endless = false;
-	public bool startAutomatically = true;
+	public bool isSpawning = true;
 
 	[Range(1, 100)]
 	public int numberOfBadGuys = 1;
@@ -13,21 +13,20 @@ public class BadGuySpawnerLogic : MonoBehaviour {
 	public float spawnInterval = 1.0f;
 	public Transform badGuy;
 
-	private bool isRunning = false;
 	private float lastSpawnTime;
 
 	// Use this for initialization
 	void Start () {
-		this.lastSpawnTime = Time.time;
+		this.lastSpawnTime = float.MinValue;
 
-		if (this.startAutomatically) {
-			this.StartSpawning ();
+		if (this.badGuy == null) {
+			Debug.LogError ("Unassigned bad guy to spawn.");
 		}
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (!this.isRunning) {
+		if (!this.isSpawning) {
 			return;
 		}
 
@@ -50,9 +49,9 @@ public class BadGuySpawnerLogic : MonoBehaviour {
 	}
 
 	public void StartSpawning() {
-		this.isRunning = true;
+		this.isSpawning = true;
 	}
 	public void StopSpawning() {
-		this.isRunning = false;
+		this.isSpawning = false;
 	}
 }

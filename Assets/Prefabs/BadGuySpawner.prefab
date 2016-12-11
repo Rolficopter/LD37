@@ -51,7 +51,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a4047ccce2842fd893762bf61391d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endless: 1
+  endless: 0
+  isSpawning: 1
   numberOfBadGuys: 1
   spawnInterval: 1
   badGuy: {fileID: 0}

@@ -7,7 +7,11 @@ public abstract class LevelBehavior : MonoBehaviour {
 	private bool isLevelActive = false;
 
 	// Use this for initialization
-	public abstract void Start ();
+	public void Start () {
+
+	}
+
+	protected abstract void LevelStart ();
 	
 	// Update is called once per frame
 	public void Update () {
@@ -23,10 +27,12 @@ public abstract class LevelBehavior : MonoBehaviour {
 	/// </summary>
 	protected abstract void UpdateLevel ();
 
-	public void LevelBecameActive() {
+	public virtual void LevelBecameActive() {
 		this.isLevelActive = true;
+
+		this.LevelStart ();
 	}
-	public void LevelBecameInactive() {
+	public virtual void LevelBecameInactive() {
 		this.isLevelActive = false;
 	}
 }

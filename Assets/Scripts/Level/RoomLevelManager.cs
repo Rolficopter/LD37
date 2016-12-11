@@ -7,7 +7,7 @@ public class RoomLevelManager : MonoBehaviour
 	public int GetNumberOfLevels() {
 		return this.levelScripts.Length;
 	}
-	public LevelBehavior[] levelScripts;
+	public MonoBehaviour[] levelScripts;
 
 	private int currentLevel;
 
@@ -76,11 +76,13 @@ public class RoomLevelManager : MonoBehaviour
 		}
 
 		if (this.levelScripts [this.currentLevel] != null) {
-			this.levelScripts [this.currentLevel].LevelBecameInactive ();
+			//this.levelScripts [this.currentLevel].LevelBecameInactive ();
+			((LevelBehavior)this.levelScripts [this.currentLevel]).LevelBecameInactive ();
 		}
 		this.currentLevel = level;
 		if (this.levelScripts [this.currentLevel] != null) {
-			this.levelScripts [this.currentLevel].LevelBecameActive ();
+			//this.levelScripts [this.currentLevel].LevelBecameActive ();
+			((LevelBehavior)this.levelScripts [this.currentLevel]).LevelBecameActive();
 		}
 
 		return true;
