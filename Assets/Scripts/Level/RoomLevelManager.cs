@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class RoomLevelManager : MonoBehaviour
 {
-
-	public int numberOfLevels;
+	public int GetNumberOfLevels() {
+		return this.levelScripts.Length;
+	}
+	public LevelBehavior[] levelScripts;
 
 	private int currentLevel;
 
@@ -14,7 +16,7 @@ public class RoomLevelManager : MonoBehaviour
 	{
 		this.SetCurrentLevel (0);
 
-		if (this.numberOfLevels < 1) {
+		if (this.GetNumberOfLevels() < 1) {
 			Debug.LogError ("Number of levels is lower than 1!");
 		}
 	}
@@ -34,7 +36,7 @@ public class RoomLevelManager : MonoBehaviour
 	{
 		int nextLevel = this.GetCurrentLevel () + 1;
 
-		if (nextLevel >= this.numberOfLevels) {
+		if (nextLevel >= this.GetNumberOfLevels() ) {
 			//Debug.Log ("You won!");
 			return;
 		} 
@@ -68,12 +70,19 @@ public class RoomLevelManager : MonoBehaviour
 	/// <param name="level">Level.</param>
 	public bool SetCurrentLevel (int level)
 	{
-		if (level < 0 || level >= this.numberOfLevels) {
+		if (level < 0 || level >= this.GetNumberOfLevels() ) {
 			Debug.LogWarningFormat ("Invalid level index: {0}", level);
 			return false;
 		}
 
+		if (this.levelScripts [this.currentLevel] != null) {
+			this.levelScripts [this.currentLevel].LevelBecameInactive ();
+		}
 		this.currentLevel = level;
+		if (this.levelScripts [this.currentLevel] != null) {
+			this.levelScripts [this.currentLevel].LevelBecameActive ();
+		}
+
 		return true;
 	}
 
