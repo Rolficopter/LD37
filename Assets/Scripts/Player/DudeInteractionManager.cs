@@ -8,6 +8,7 @@ public class DudeInteractionManager : MonoBehaviour {
 	public float interactionDistance = 1.5f;
 
 	private bool canInteract;
+	private GameObject currentLever;
 
 	// Use this for initialization
 	void Start () {
@@ -22,17 +23,20 @@ public class DudeInteractionManager : MonoBehaviour {
 	}
 
 	private void TryPullLever() {
-		Transform raySource = this.transform;
-		Vector3 forward = raySource.TransformDirection (Vector3.forward);
+		if (currentLever != null) {
+			StartCoroutine(this.PullLever (currentLever));
+		}
+	}
 
-		RaycastHit hit;
-		if (Physics.Raycast (raySource.position, forward, out hit, this.interactionDistance)) {
-			// hit a collider at distance y
+	void OnTriggerEnter(Collider other) {
+		if (other.gameObject.tag == "Lever") {
+			currentLever = other.gameObject;
+		}
+	}
 
-			GameObject lever = hit.collider.gameObject;
-			if (lever.tag == "Lever") {
-				StartCoroutine(this.PullLever (lever));
-			}
+	void OnTriggerExit(Collider other) {
+		if (other.gameObject.tag == "Lever") {
+			currentLever = null;
 		}
 	}
 
