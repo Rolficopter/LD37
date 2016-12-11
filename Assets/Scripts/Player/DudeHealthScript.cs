@@ -6,6 +6,7 @@ public class DudeHealthScript : MonoBehaviour {
 
 	public float maxHealth = 100f;
 	public float health = 0f;
+	public UnityEngine.UI.Text text;
 
 	// Use this for initialization
 	void Start () {
@@ -14,7 +15,7 @@ public class DudeHealthScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		text.text = "<3: " + health + "/" + maxHealth;
 	}
 
 	void OnCollisionEnter(Collision collision) {
