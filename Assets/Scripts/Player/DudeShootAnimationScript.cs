@@ -8,11 +8,13 @@ public class DudeShootAnimationScript : MonoBehaviour {
 	private float animationStart;
 	private bool shot = false;
 	private Vector3 startPosition;
+	private Quaternion startRotation;
 
 	// Use this for initialization
 	void Start () {
 		animationStart = 0;
 		startPosition = transform.localPosition;
+		startRotation = transform.localRotation;
 	}
 	
 	// Update is called once per frame
@@ -28,6 +30,7 @@ public class DudeShootAnimationScript : MonoBehaviour {
 			shot = true;
 		} else {
 			transform.localPosition = startPosition;
+			transform.localRotation = startRotation;
 		}
 	}
 }
