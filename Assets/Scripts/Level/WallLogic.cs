@@ -26,6 +26,7 @@ public class WallLogic : MonoBehaviour
 		var anim = this.GetComponent<Animation> ();
 		anim.Play (this.disappearInGroundAnimationName);
 		// TODO: set animation duration
+		// TODO: let audioclip finish playing
 		yield return anim.WhilePlaying ();
 		DestroyObject (this.gameObject);
 	}
