@@ -22,10 +22,11 @@ public class DudeInteractionManager : MonoBehaviour {
 	}
 
 	private void TryPullLever() {
-		RaycastHit hit;
-		Vector3 forward = this.transform.TransformDirection (Vector3.forward);
+		Transform raySource = this.transform;
+		Vector3 forward = raySource.TransformDirection (Vector3.forward);
 
-		if (Physics.Raycast (transform.position, forward, out hit, this.interactionDistance)) {
+		RaycastHit hit;
+		if (Physics.Raycast (raySource.position, forward, out hit, this.interactionDistance)) {
 			// hit a collider at distance y
 
 			GameObject lever = hit.collider.gameObject;
