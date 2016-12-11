@@ -6,19 +6,20 @@ public class BadGuySoundScript : MonoBehaviour {
 
 	public AudioClip[] sounds;
 
-	bool newSoundQueued;
+	private AudioSource audioSource;
+	private bool newSoundQueued;
 
 	// Use this for initialization
 	void Start () {
-		
+		// pre-load a sound
+		// this will be the sound for the lifetime of this monster
+		this.audioSource = GetComponent<AudioSource> ();
+		this.audioSource.clip = sounds [Random.Range (0, sounds.Length)];
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		AudioSource audioSource = GetComponent<AudioSource> ();
-
-		if (!audioSource.isPlaying && !newSoundQueued) {
-			audioSource.clip = sounds [Random.Range (0, sounds.Length)];
+		if (!this.audioSource.isPlaying && !newSoundQueued) {
 			newSoundQueued = true;
 			Invoke ("Play", 2);
 		}
@@ -26,9 +27,8 @@ public class BadGuySoundScript : MonoBehaviour {
 	}
 
 	void Play() {
-		AudioSource audioSource = GetComponent<AudioSource> ();
-		audioSource.pitch = Random.value + 0.5f;
-		audioSource.Play ();
+		this.audioSource.pitch = Random.value + 0.5f;
+		this.audioSource.Play ();
 		newSoundQueued = false;
 	}
 }
