@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4553876400740826}
   - component: {fileID: 114338899562954858}
+  - component: {fileID: 114014776605239768}
   m_Layer: 0
   m_Name: BadGuySpawner
   m_TagString: Untagged
@@ -33,13 +34,25 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1515048716897544}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.9, y: 2.55, z: 10.354704}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.961, y: 1.05, z: 0.887}
+  m_LocalScale: {x: 0.05, y: 1, z: 0.05}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114014776605239768
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1515048716897544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64d77504c624c1342a46790af20be5f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  badGuySpawner: {fileID: 4553876400740826}
 --- !u!114 &114338899562954858
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -52,7 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endless: 0
-  isSpawning: 1
-  numberOfBadGuys: 1
+  isSpawning: 0
+  numberOfBadGuys: 30
   spawnInterval: 1
   badGuy: {fileID: 0}

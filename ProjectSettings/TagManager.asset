@@ -11,6 +11,7 @@ TagManager:
   - GameManager
   - Lever
   - Enemy
+  - RemoveFor_Level5
   layers:
   - Default
   - TransparentFX

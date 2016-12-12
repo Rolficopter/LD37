@@ -60,7 +60,7 @@ public class RoomLevelManager : MonoBehaviour
 			}
 		}
 		CameraShake cs = FindObjectOfType<CameraShake> ();
-		cs.StartShake (longestWallRemovalTime);
+		cs.StartShake (longestWallRemovalTime - 2);
 	}
 
 	/// <summary>

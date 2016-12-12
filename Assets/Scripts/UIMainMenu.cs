@@ -9,6 +9,7 @@ public class UIMainMenu : MonoBehaviour {
 	void Start() {
 		text = GameObject.Find ("Loading Text");
 		text.SetActive (false);
+		Cursor.visible = true;
 	}
 
 	public void StartGame()

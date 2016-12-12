@@ -9,6 +9,7 @@ public class DudeShootingScript : MonoBehaviour {
 	public Transform projectileSpawn;
 	public float shootingLightDuration = 0.05f;
 	public Light shootingLight;
+	public AudioSource gunSound;
 
 	private float shootLimit;
 
@@ -22,9 +23,7 @@ public class DudeShootingScript : MonoBehaviour {
 	}
 
     // Update is called once per frame
-    private float deltaTimeSum = 0f;
     void Update () {
-        deltaTimeSum += Time.deltaTime;
 		if (Input.GetButtonDown ("Fire1") && (Time.time > lastShoot + shootLimit || !shot)) {
 			shootingLight.intensity = 3f;
 			Invoke ("SwitchLightOff", shootingLightDuration);
@@ -34,6 +33,7 @@ public class DudeShootingScript : MonoBehaviour {
 			Destroy (bullet.gameObject, 2);
 			lastShoot = Time.time;
 			shot = true;
+			gunSound.Play ();
 		}
 	}
 

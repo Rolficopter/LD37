@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 95498370453070174}
   - component: {fileID: 114158118195546876}
   - component: {fileID: 108484952926312766}
+  - component: {fileID: 82738589493550728}
   m_Layer: 0
   m_Name: 1911 Colt
   m_TagString: Untagged
@@ -246,7 +247,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1447646038903998}
-  m_LocalRotation: {x: -0.075848915, y: 0, z: 0, w: 0.99711937}
+  m_LocalRotation: {x: -0.054078825, y: 0, z: 0, w: 0.9985367}
   m_LocalPosition: {x: 0, y: 0.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -757,9 +758,89 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4ac15b34fc22bbf42a14e05842968b80, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ce7307aba23e45c40808dfff015226fc, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.238
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 130
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!82 &82738589493550728
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1312622591953900}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6f89552e0f936f248865c750d2fe4a4d, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.416
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -797,7 +878,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 2
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1055,6 +1136,7 @@ MonoBehaviour:
   projectileSpawn: {fileID: 4889935149200190}
   shootingLightDuration: 0.05
   shootingLight: {fileID: 108505684843944724}
+  gunSound: {fileID: 82738589493550728}
 --- !u!114 &114426442992669220
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1078,7 +1160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 321f2f39c57729341b48f65c48d63535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 50
   health: 100
   text: {fileID: 114024593889200188}
 --- !u!114 &114744951338172992
@@ -1247,9 +1329,9 @@ MonoBehaviour:
     BobAmount: 0.1
   m_StepInterval: 5
   m_FootstepSounds:
+  - {fileID: 8300000, guid: ce7307aba23e45c40808dfff015226fc, type: 3}
   - {fileID: 8300000, guid: 193a208268161b84195a6f967b47c642, type: 3}
   - {fileID: 8300000, guid: 3de11e833e3d1e245a3344e29f187017, type: 3}
-  - {fileID: 8300000, guid: ce7307aba23e45c40808dfff015226fc, type: 3}
   - {fileID: 8300000, guid: 3e03d330f6adb974f9d25535e8b03a70, type: 3}
   - {fileID: 8300000, guid: e2257c9adfb167740a136427a6cf929a, type: 3}
   m_JumpSound: {fileID: 8300000, guid: a296291774489404f9dbf5a923255259, type: 3}
@@ -1307,9 +1389,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.54
-  m_Height: 1.91
+  m_Height: 2.85
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.51, z: 0}
 --- !u!143 &143842087067893132
 CharacterController:
   m_ObjectHideFlags: 1
@@ -1326,7 +1408,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.18, z: 0}
 --- !u!222 &222136200077494456
 CanvasRenderer:
   m_ObjectHideFlags: 1

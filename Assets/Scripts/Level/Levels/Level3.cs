@@ -1,0 +1,14 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Level3 : LevelBehavior {
+
+	protected override void LevelStart() {
+		GetComponent<AudioSource> ().Play ();
+	}
+
+	protected override void UpdateLevel() {
+
+	}
+}
